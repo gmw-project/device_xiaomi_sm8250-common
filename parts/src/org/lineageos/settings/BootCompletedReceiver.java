@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (C) 2015 The CyanogenMod Project
  *               2017-2020 The LineageOS Project
  *
@@ -25,6 +25,7 @@ import android.util.Log;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 import org.lineageos.settings.RefreshRateHandler;
+import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -37,5 +38,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DozeUtils.checkDozeService(context);
         TouchSamplingUtils.restoreSamplingValue(context);
         RefreshRateHandler.setFPS(RefreshRateHandler.getRefreshRate(context));
+        ThermalUtils.startService(context);
     }
 }
