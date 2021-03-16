@@ -151,10 +151,6 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 ifneq ($(TARGET_NO_FOD),true)
 PRODUCT_PRODUCT_PROPERTIES += \
     doze.enable_fod_service=true
