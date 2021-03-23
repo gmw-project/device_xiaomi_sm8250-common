@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+on boot
+    # FPS Info permissions
+    chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps
+    chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps
+
 on property:sys.boot_completed=1
     # Make sure xiaomi touch dosen't report "accidental touches".
     rm /dev/input/event0
