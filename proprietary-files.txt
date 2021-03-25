@@ -644,6 +644,14 @@ vendor/lib64/vendor.qti.hardware.perf@2.0.so
 vendor/lib64/vendor.qti.hardware.perf@2.1.so
 vendor/lib64/vendor.qti.hardware.perf@2.2.so
 
+# Perf - from LA.UM.9.16.r1-03300-MANNAR.0
+system_ext/lib64/libframeextension.so|df3a612a01bafad830d02f363046d7b0c9a21e35
+system_ext/lib64/libdolphin.so|5c645e95fe52740433a6bf7b8c94988ec6ef8008
+system_ext/lib64/libbeluga.so|323cadc5067d5b4641286d584aa30ac3a24cedbb
+system_ext/lib/libframeextension.so|6aad12b621453914b3697ffd4358a15be389d951
+system_ext/lib/libdolphin.so|d2c39ae9410cf7126e7a4dd546090add0f5bd50b
+system_ext/lib/libbeluga.so|476b76af5190f5a88b71e217a54513abd0a0580f
+
 # Power-off alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
