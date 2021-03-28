@@ -629,8 +629,6 @@ vendor/lib/libperfioctl.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.perf@2.1.so
-vendor/lib/vendor.qti.hardware.perf@2.2.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/libmeters.so
 vendor/lib64/libperfconfig.so
@@ -639,8 +637,6 @@ vendor/lib64/libperfioctl.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.perf@2.1.so
-vendor/lib64/vendor.qti.hardware.perf@2.2.so
 
 # Perf - from LA.UM.9.16.r1-03300-MANNAR.0
 system_ext/lib64/libframeextension.so|df3a612a01bafad830d02f363046d7b0c9a21e35
