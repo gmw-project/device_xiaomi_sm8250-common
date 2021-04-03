@@ -179,6 +179,9 @@ vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/consumerir.default.so
 
 # Display
+vendor/bin/displayfeature
+vendor/lib64/libdisplayfeature.so
+vendor/lib64/libdisplayfeatureservice.so
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
