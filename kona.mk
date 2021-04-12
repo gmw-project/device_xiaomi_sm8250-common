@@ -6,7 +6,7 @@
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-TARGET_NO_FOD ?= true
+TARGET_NO_FOD := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -144,6 +144,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
+
+ifneq ($(TARGET_NO_FOD),true)
+PRODUCT_PRODUCT_PROPERTIES += \
+    doze.enable_fod_service=true
+endif
 
 # Component overrides
 PRODUCT_COPY_FILES += \
