@@ -188,6 +188,7 @@ BOARD_SEPOLICY_M4DEFS += \
     sysfs_kgsl=vendor_sysfs_kgsl \
     sysfs_scsi_host=vendor_sysfs_scsi_host \
     sysfs_ssr=vendor_sysfs_ssr \
+    sysfs_battery_supply=vendor_sysfs_battery_supply \
     wcnss_service_exec=vendor_wcnss_service_exec \
     wifi_vendor_data_file=vendor_wifi_vendor_data_file
 
