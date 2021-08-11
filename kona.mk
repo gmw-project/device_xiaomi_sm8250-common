@@ -338,6 +338,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Platform
+KONA := sm8250
+TARGET_BOARD_PLATFORM := $(KONA)
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
