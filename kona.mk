@@ -368,8 +368,7 @@ PRODUCT_PACKAGES += \
     libxml2
 
 # QTI
-TARGET_COMMON_QTI_COMPONENTS := \
-    perf
+include $(LOCAL_PATH)/perf/qti-perf.mk
 
 # Rootdir
 PRODUCT_PACKAGES += \
