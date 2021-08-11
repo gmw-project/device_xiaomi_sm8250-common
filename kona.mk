@@ -342,6 +342,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Platform
+QCOM_BOARD_PLATFORMS += sm8250
 KONA := sm8250
 TARGET_BOARD_PLATFORM := $(KONA)
 
