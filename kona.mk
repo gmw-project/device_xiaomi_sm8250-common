@@ -161,9 +161,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstdc++.vendor
 
-PRODUCT_PACKAGES += \
-    Snap
-
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
