@@ -120,10 +120,10 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so
 
-# Display (HDR) - from APOLLO DEV
+# Display (HDR)
 vendor/lib64/libhdr_tm.so
 
-# Display (SDM) - from APOLLO DEV
+# Display (SDM)
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libqseed3.so
@@ -134,7 +134,7 @@ vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# Display postprocessing - from APOLLO DEV
+# Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
 vendor/etc/init/vendor.display.color@1.0-service.rc
