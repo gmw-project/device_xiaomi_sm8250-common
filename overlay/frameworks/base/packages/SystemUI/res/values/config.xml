@@ -33,4 +33,7 @@
     <!-- FPSInfoService FPS node file path -->
     <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
 
+    <!-- SystemUI vender service, used in config_systemUIServiceComponents. -->
+    <string name="config_systemUIVendorServiceComponent" translatable="false">com.syberia.android.systemui.SyberiaServices</string>
+
 </resources>
