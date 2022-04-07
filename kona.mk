@@ -201,6 +201,11 @@ PRODUCT_PACKAGES += \
     gralloc.default \
     gralloc.kona \
     memtrack.kona \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.1 \
+    vendor.display.config@1.2 \
+    vendor.display.config@1.3 \
+    vendor.display.config@1.4 \
     vendor.display.config@1.5 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
@@ -458,13 +463,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-# WiFi Display
+# WFD
 PRODUCT_PACKAGES += \
+    libavservices_minijail \
     libnl \
     libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    debug.sf.enable_hwc_vds=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
+
+SOONG_CONFIG_NAMESPACES += qtiunifeddraw
+SOONG_CONFIG_qtiunifeddraw := qtiunifeddraw_enabled
+SOONG_CONFIG_qtiunifeddraw_qtiunifeddraw_enabled := true
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
