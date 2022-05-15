@@ -90,7 +90,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.bluetooth.a2dp@1.0
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -146,14 +147,19 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    vendor.qti.hardware.bluetooth_dun@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor \
+    vendor.qti.hardware.fm@1.0.vendor \
+    com.dsi.ant@1.0.vendor
 
 # Bluetooth QTI
 PRODUCT_PACKAGES += \
     libbthost_if \
     libbthost_if.vendor \
-    libldacBT_bco.vendor
+    libldacBT_bco.vendor \
+    libbluetooth_audio_session
 
 # Camera
 PRODUCT_PACKAGES += \
