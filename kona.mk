@@ -469,7 +469,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30 31
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -510,7 +510,7 @@ SOONG_CONFIG_qtiunifeddraw_qtiunifeddraw_enabled := true
 
 # Wlan
 PRODUCT_CFI_INCLUDE_PATHS += \
-    hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
+    hardware/qcom/wlan/qcwcn/wpa_supplicant_8_lib
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
