@@ -6,25 +6,17 @@
 
 COMMON_PATH := device/xiaomi/sm8250-common
 
-
-
-# APEX
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := kryo385
+TARGET_CPU_VARIANT := cortex-a76
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := generic
-TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
+TARGET_2ND_CPU_VARIANT := cortex-a76
 
 # Audio
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
@@ -53,10 +45,6 @@ TARGET_USE_QTI_BT_STACK := true
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER := true
 
-# Camera
-TARGET_USES_QTI_CAMERA_DEVICE := true
-USE_DEVICE_SPECIFIC_CAMERA := true
-
 # Display
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x546C00000000
 TARGET_NO_RAW10_CUSTOM_FORMAT := true
@@ -69,16 +57,11 @@ TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 
-# DRM
-TARGET_ENABLE_MEDIADRM_64 := true
+# Platform
+BOARD_VENDOR := xiaomi
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
-
-# Fingerprint
-ifeq ($(TARGET_HAS_FOD),true)
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.xiaomi_kona
-endif
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/framework_compatibility_matrix.xml
@@ -93,19 +76,27 @@ BOARD_BOOT_HEADER_VERSION := 3
 else
 BOARD_BOOT_HEADER_VERSION := 2
 endif
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket reboot=panic_warm
-BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-BOARD_KERNEL_IMAGE_NAME := Image-dtb
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
-TARGET_KERNEL_CLANG_VERSION := r445002
-TARGET_KERNEL_LLVM_BINUTILS := true
-TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1 LLVM_IAS=1
-KERNEL_SUPPORTS_LLVM_TOOLS := true
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_KERNEL_CMDLINE := \
+    androidboot.console=ttyMSM0 \
+    androidboot.hardware=qcom \
+    androidboot.init_fatal_reboot_target=recovery \
+    androidboot.memcg=1 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    cgroup.memory=nokmem,nosocket \
+    console=ttyMSM0,115200n8 \
+    earlycon=msm_geni_serial,0xa90000 \
+    loop.max_part=7 \
+    lpm_levels.sleep_disabled=1 \
+    msm_rtb.filter=0x237 \
+    reboot=panic_warm \
+    service_locator.enable=1 \
+    swiotlb=2048
+
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_PAGESIZE := 4096
 
 # NFC
 TARGET_USES_NQ_NFC := true
@@ -164,11 +155,6 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Platform
-BOARD_VENDOR := xiaomi
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := kona
-
 # Power
 TARGET_TAP_TO_WAKE_NODE  := "/sys/touchpanel/double_tap"
 
@@ -199,7 +185,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2022-03-01
 
 # Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+#include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
