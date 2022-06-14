@@ -294,10 +294,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0.vendor \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    libavservices_minijail_vendor
+    android.hardware.media.c2@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -371,6 +368,7 @@ PRODUCT_COPY_FILES += \
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
+    perf \
     nq-nfc
 
 TARGET_NFC_SKU := $(PRODUCT_DEVICE)
@@ -430,10 +428,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=QTI \
     ro.soc.model=SM8250
-
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti
 
 # USB
 PRODUCT_PACKAGES += \

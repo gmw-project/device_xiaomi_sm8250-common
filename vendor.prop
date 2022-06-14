@@ -246,13 +246,6 @@ ro.camera.notify_nfc=1
 # OTG
 persist.sys.oem.otg_support=true
 
-# PASR
-vendor.power.pasr.enabled=false
-
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf.scroll_opt=true
-
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
 
@@ -298,7 +291,3 @@ vendor.usb.use_ffs_mtp=0
 
 # WiFi
 wifi.aware.interface=wifi-aware0
-
-# IORap
-iorapd.perfetto.enable=true
-iorapd.readahead.enable=true
