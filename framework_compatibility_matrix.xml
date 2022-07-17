@@ -464,4 +464,69 @@
             <instance>default</instance>
         </interface>
     </hal>
+<hal format="hidl" optional="true">
+    <name>vendor.lineage.livedisplay</name>
+    <version>2.0</version>
+    <interface>
+        <name>IPictureAdjustment</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.hardware.iop</name>
+    <version>2.0</version>
+    <interface>
+        <name>IIop</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.hardware.perf</name>
+    <version>2.0-2</version>
+    <interface>
+        <name>IPerf</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.hardware.servicetracker</name>
+    <version>1.0-2</version>
+    <interface>
+        <name>IServicetracker</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.hardware.wifi.hostapd</name>
+    <version>1.0-2</version>
+    <interface>
+        <name>IHostapdVendor</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.hardware.wifi.supplicant</name>
+    <version>2.0-2</version>
+    <interface>
+        <name>ISupplicantVendor</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.memory.pasrmanager</name>
+    <version>1.0-1</version>
+    <interface>
+        <name>IPasrManager</name>
+        <instance>pasrhal</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.qspmhal</name>
+    <version>1.0</version>
+    <interface>
+        <name>IQspmhal</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+
 </compatibility-matrix>
