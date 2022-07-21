@@ -417,7 +417,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/xiaomi \
+    hardware/qcom/wlan
 
 # SOC Properties
 PRODUCT_PROPERTY_OVERRIDES += \
