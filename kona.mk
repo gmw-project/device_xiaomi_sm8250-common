@@ -243,6 +243,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.5 \
     vendor.display.config@1.9.vendor \
     vendor.display.config@1.11.vendor \
+    vendor.display.config@1.20.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
@@ -257,6 +258,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V4-ndk_platform.vendor \
     vendor.qti.hardware.display.config-V5-ndk_platform.vendor \
     vendor.qti.hardware.display.config-V6-ndk_platform.vendor
+
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.mapperextensions@1.3.vendor \
+    vendor.qti.hardware.display.composer@3.1.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml
