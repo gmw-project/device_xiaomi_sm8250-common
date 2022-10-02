@@ -185,7 +185,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides_qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml
 
 # Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapgrowthlimit=256m \
     dalvik.vm.heapmaxfree=8m \
     dalvik.vm.heapminfree=512k \
@@ -441,7 +441,7 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge
 
 # SOC Properties
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI \
     ro.soc.model=SM8250
 
