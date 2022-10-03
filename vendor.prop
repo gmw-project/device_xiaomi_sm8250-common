@@ -173,6 +173,9 @@ vendor.display.use_smooth_motion=0
 # DRM
 drm.service.enabled=true
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true 
+
 # Fingerprint
 persist.vendor.qfp=false
 
