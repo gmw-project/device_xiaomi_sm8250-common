@@ -385,7 +385,8 @@ PRODUCT_COPY_FILES += \
 TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     perf \
-    nq-nfc
+    nq-nfc \
+    wfd
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -499,11 +500,8 @@ WIFI_FEATURE_HOSTAPD_11AX := true
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
